@@ -1,12 +1,15 @@
-.navbar {
+.host {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   border-bottom: #f5af19 5px solid;
   margin-bottom: 5rem;
   padding-bottom: 2rem;
-  padding-top: 30px;
   min-width: 100vw;
+}
+
+.navbar {
+  padding-top: 30px;
 }
 
 .nav {

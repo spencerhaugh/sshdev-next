@@ -1,4 +1,5 @@
 import styles from './about.module.scss';
+import SkillsComponent from "@/app/components/SkillsComponent/SkillsComponent";
 
 const AboutPage = () => {
     return (
@@ -10,7 +11,7 @@ const AboutPage = () => {
 
                 <div className={styles.aboutContainer}>
                     <div className={styles.aboutSkills}>
-                        skills here!
+                        <SkillsComponent />
                     </div>
                 </div>
 
