@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+.projectComponent {
+  display: flex;
+  place-content: center;
+}
+
+.image {
+  max-width: 600px;
+  width: 80%;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(70, 70, 70, 0.69);
+  -moz-box-shadow: 2px 2px 8px 0px rgba(70, 70, 70, 0.69);
+  box-shadow: 2px 2px 8px 0px rgba(70, 70, 70, 0.69);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.005);
+  }
+}
+
+.h2 {
+  font-family: 'Bungee Shade', Helvetica, Arial, serif;
+  font-size: 3rem;
+  line-height: 2.5rem;
+  margin: 0 auto;
+  transition: color 0.4s ease-in-out;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.projectTile {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(238, 238, 238, 0.3);
+  max-width: 55%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  border: 1px solid #555;
+  padding: 2%;
+  border-radius: 20px;
+  transition: background-color 0.6s ease;
+}
+
+  .projectTile:hover {
+    background-color: rgba(238, 238, 238, 0.6);
+
+    .h2 {
+      color: #f5af19;
+      }
+  }
+
+
+.button {
+  border: none;
+  padding: 15px;
+  margin-top: 15%;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 45%;
+}
+
+.liveSite {
+  background-color: orange;
+  color: whitesmoke;
+}
+
+.githubCode {
+  background-color: rgb(95, 187, 115);
+  color: whitesmoke;
+}
+
+.description, .tech {
+    width: 50%;
+    margin-top: 4%;
+  }
+
+
+@media (max-width: 900px) {
+    .buttons {
+      flex-direction: column;
+    }
+    .projectTile {
+      max-width: 70%;
+    }
+    .description {
+      width: 80%;
+      margin-top: 4%;
+    }
+    .tech {
+      width: 80%;
+      margin-top: 4%;
+    }
+    .h2 {
+    font-size: 2.5rem;
+  }
+  }
+  @media (max-width: 600px) {
+    .projectTile {
+      max-width: 80%;
+      padding: 2%;
+    }
+    .tech {
+      font-size: 0.75rem;
+    }
+    .h2 {
+    font-size: 2rem;
+    margin: 5px auto;
+  }
+  }
+  @media (max-width: 400px) {
+  .projectTile {
+    max-width: 85%;
+    padding: 2%;
+  }
+  .h2 {
+    font-size: 1.5rem;
+    margin: 5px auto;
+  }
+  }

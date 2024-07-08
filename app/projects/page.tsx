@@ -1,5 +1,7 @@
-import ProjectComponent from "@/app/components/ProjectComponent";
+import ProjectComponent from "@/app/components/ProjectComponent/ProjectComponent";
 
+
+// TODO: Fetch from API
 const page = [{
       name: 'Poorly Drawn Pokemon',
       description: 'A full stack image hosting platform',
@@ -24,6 +26,33 @@ const page = [{
       repoLink: '',
       body: 'This site has been built twice, once in Next JS using React, and once in Analog JS using Angular. I wanted to compare using these two SSR frameworks, and I thought "what better way to learn them than to build the same frontend with each technology?" And so, a project was born.',
       technologies: ['Next JS', 'Analog JS', 'React', 'Angular', 'SSR', 'Shared backend']
+    },
+    {
+      name: 'Hangry',
+      description: 'A sassy recipe suggestion app',
+      imgAsset: '/hangry-app.png',
+      link: 'https://mystifying-mccarthy-7142e6.netlify.app/',
+      repoLink: 'https://github.com/spencerhaugh/hangry',
+      body: 'Welcome to Hangry! This is version 2.0 of the project I first created as a software engineering bootcamp student in 2020. I was very happy with it at the time, but since then as I have continued to build my skills, I thought it would be fun to revist this project and apply this experience. Looking back at this app\'s original codebase was a journey. I remember the struggle and the frustration. I built this app originally in Vue (it was a project requirement to use a technology that was new to us), but for v2 I am using React. These days, at my day job I am building with Angular, and I wanted to make sure I stayed sharp in React as well.',
+      technologies: ['React', 'Javascript', 'Material UI', '3rd Party API']
+    },
+    {
+      name: 'Palette Maker',
+      description: 'A custom color palette creator',
+      imgAsset: '/color-app.png',
+      link: 'https://cranky-murdock-697124.netlify.app/',
+      repoLink: 'https://github.com/spencerhaugh/color-project',
+      body: 'This was a really fun project! This React project implements advanced React patterns and UI functionality (like drag and drop, copy to clipboard, and transitions). The app utilizes concepts like Higher Order Components, Context, and Reducers for state management in React, Drag and Drop libraries, MaterialUI for component styling, and more.',
+      technologies: ['React', 'Javascript', 'Material UI', 'Drag and Drop', 'React Transition Group', 'Responsive UI design']
+    },
+    {
+      name: 'Wide Angle Podium',
+      description: 'A podcast network website',
+      imgAsset: '/wapn-app.png',
+      link: 'https://www.wideanglepodium.com',
+      repoLink: '',
+      body: 'This fully deployed and revenue-generating site is built for a podcast network, built to collect recurring donations, and receiving data from multiple podcast RSS feeds. It is also integrated with the Stripe API and the Recurly API to process recurring monthly payments. There are complex form submissions to track donor activity, and secure pages for authorized users only.',
+      technologies: ['Wordpress CMS', 'Payment processing', 'Stripe API', 'Recurly API', 'SSL', '3rd Party RSS feeds', 'Responsive design']
     },
 ]
 
