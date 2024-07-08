@@ -24,7 +24,7 @@ export default function RootLayout({
                 crossOrigin="anonymous"
             />
         </head>
-        <body className={inter.className}>
+        <body>
         <main>
             <NavbarComponent/>
             {children}
