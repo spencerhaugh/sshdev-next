@@ -63,8 +63,7 @@ const SkillsComponent = () => {
                             skillsList.map((skill) => {
                                 return (
                                     <li className={styles.skillsListItem}>
-                                        <i className={ skill.icon }></i>
-                                        { skill.name }
+                                        <i className={ skill.icon }></i> { skill.name }
                                     </li>
                                 )
                             })

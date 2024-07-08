@@ -1,14 +1,13 @@
 import type {Metadata} from "next";
-import {Inter} from "next/font/google";
 import "./globals.css";
 import NavbarComponent from "@/app/components/NavbarComponent/NavbarComponent";
-
-const inter = Inter({subsets: ["latin"]});
 
 export const metadata: Metadata = {
     title: "Spencer Haugh",
     description: "A pretty cool nerd",
 };
+
+export const RESUME_LINK = "https://drive.google.com/file/d/1-AifT8L92THPadpXjZqazPAygQGKalEu/view?usp=sharing"
 
 export default function RootLayout({
                                        children,
