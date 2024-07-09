@@ -1,4 +1,5 @@
 @use '../styles/animations';
+@import "../styles/variables";
 
 .contact {
   display: flex;
@@ -41,11 +42,11 @@
 }
 
 .span {
-  color: #f5af19;
+  color: $lucky-orange;
 }
 
 .li:hover i {
-  color: #f5af19;
+  color: $lucky-orange;
   transition: 0.2s ease-in-out;
   transform: translateX(5px);
 }

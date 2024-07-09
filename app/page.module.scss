@@ -1,5 +1,7 @@
+@import "./styles/variables";
+
 .homeTitle {
-  color: #f5af19;
+  color: $lucky-orange;
   margin-bottom: 3%;
   font-size: 2rem;
 }
