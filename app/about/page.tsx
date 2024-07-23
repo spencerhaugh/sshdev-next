@@ -1,13 +1,13 @@
 import styles from './about.module.scss';
 import SkillsComponent from "@/app/components/SkillsComponent/SkillsComponent";
-import {json} from "node:stream/consumers";
+
 
 interface AboutObject {
     title: string;
     content: string[];
 }
 
-async function getData() {
+async function getAboutData() {
     const response = await fetch(
         'https://portfolio-server-production-c31f.up.railway.app/about'
     );
@@ -17,7 +17,7 @@ async function getData() {
 }
 
 const AboutPage = async () => {
-    const aboutData: AboutObject[] = await getData();
+    const aboutData: AboutObject[] = await getAboutData();
 
     return (
         <>
@@ -25,13 +25,11 @@ const AboutPage = async () => {
                 // HELLO
             </h1>
             <div className={styles.about}>
-
                 <div className={styles.aboutContainer}>
                     <div className={styles.aboutSkills}>
                         <SkillsComponent />
                     </div>
                 </div>
-
                 <article className={styles.aboutText}>
                     <section id="professional">
                         <h3>{aboutData[0].title}</h3>
@@ -50,7 +48,6 @@ const AboutPage = async () => {
                             )
                         }
                     </section>
-
                     <section className={styles.personal}>
                         <h3>{aboutData[2].title}</h3>
                         {
@@ -60,7 +57,6 @@ const AboutPage = async () => {
                             )
                         }
                     </section>
-
                     <section className={styles.important}>
                         <h3>{aboutData[3].title}</h3>
                         {
@@ -72,7 +68,6 @@ const AboutPage = async () => {
                     </section>
                 </article>
             </div>
-
         </>
     )
 }
