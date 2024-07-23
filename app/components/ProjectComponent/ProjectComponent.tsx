@@ -1,7 +1,7 @@
 import styles from './ProjectComponent.module.scss';
 import classnames from 'classnames';
 
-interface Project {
+export interface ProjectObject {
     name: string;
     description: string;
     imgAsset: string;
@@ -11,7 +11,7 @@ interface Project {
     technologies: string[];
 }
 
-export default function ProjectComponent(project: Project) {
+export default function ProjectComponent(project: ProjectObject) {
     return (
         <div className={styles.projectComponent}>
             <article className={styles.projectTile}>
