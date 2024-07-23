@@ -1,5 +1,6 @@
 import styles from './about.module.scss';
 import SkillsComponent from "@/app/components/SkillsComponent/SkillsComponent";
+import { BASE_DATA_URL } from "@/app/layout";
 
 
 interface AboutObject {
@@ -9,7 +10,7 @@ interface AboutObject {
 
 async function getAboutData() {
     const response = await fetch(
-        'https://portfolio-server-production-c31f.up.railway.app/about'
+        `${BASE_DATA_URL}/about`
     );
 
     return await response.json();

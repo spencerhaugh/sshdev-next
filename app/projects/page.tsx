@@ -1,8 +1,9 @@
 import ProjectComponent, { ProjectObject } from "@/app/components/ProjectComponent/ProjectComponent";
+import { BASE_DATA_URL } from "@/app/layout";
 
 async function getProjectsData() {
     const response = await fetch(
-        'https://portfolio-server-production-c31f.up.railway.app/projects'
+        `${BASE_DATA_URL}/projects`
     );
     return await response.json();
 }
@@ -10,7 +11,7 @@ async function getProjectsData() {
 const ProjectPage = async () => {
     const projectData: ProjectObject[]  = await getProjectsData();
 
-    return(
+    return (
         <>
             {
                 projectData.map(project => (

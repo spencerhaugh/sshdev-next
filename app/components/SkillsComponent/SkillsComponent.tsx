@@ -1,4 +1,5 @@
 import styles from './SkillComponent.module.scss';
+import { BASE_DATA_URL } from "@/app/layout";
 
 export interface SkillObject {
   icon: string;
@@ -7,7 +8,7 @@ export interface SkillObject {
 
 async function getSkillsData() {
     const response = await fetch(
-        'https://portfolio-server-production-c31f.up.railway.app/skills'
+        `${BASE_DATA_URL}/skills`
     );
     return await response.json();
 }

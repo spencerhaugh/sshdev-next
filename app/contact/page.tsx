@@ -1,6 +1,7 @@
 import styles from './contact.module.scss'
 import classnames from "classnames";
 import ResumeButton from "@/app/components/ResumeButtonComponent/ResumeButtonComponent";
+import { BASE_DATA_URL } from "@/app/layout";
 
 interface ContactObject {
   method: string,
@@ -10,7 +11,7 @@ interface ContactObject {
 
 async function getData() {
     const response = await fetch(
-        'https://portfolio-server-production-c31f.up.railway.app/contact'
+        `${BASE_DATA_URL}/contact`
       );
     return await response.json();
 }
