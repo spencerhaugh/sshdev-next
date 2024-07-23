@@ -1,5 +1,5 @@
 import styles from './SkillComponent.module.scss';
-import { BASE_DATA_URL } from "@/app/page";
+import { BASE_DATA_URL } from "@/app/app.config";
 
 export interface SkillObject {
   icon: string;

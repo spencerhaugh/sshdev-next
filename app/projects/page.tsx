@@ -1,5 +1,5 @@
 import ProjectComponent, { ProjectObject } from "@/app/components/ProjectComponent/ProjectComponent";
-import { BASE_DATA_URL } from "@/app/page";
+import { BASE_DATA_URL } from "@/app/app.config";
 
 async function getProjectsData() {
     const response = await fetch(

@@ -1,6 +1,6 @@
 import styles from './about.module.scss';
 import SkillsComponent from "@/app/components/SkillsComponent/SkillsComponent";
-import { BASE_DATA_URL } from "@/app/page";
+import { BASE_DATA_URL } from "@/app/app.config";
 
 
 interface AboutObject {
