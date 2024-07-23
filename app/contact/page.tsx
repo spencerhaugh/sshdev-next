@@ -1,7 +1,7 @@
 import styles from './contact.module.scss'
 import classnames from "classnames";
 import ResumeButton from "@/app/components/ResumeButtonComponent/ResumeButtonComponent";
-import { BASE_DATA_URL } from "@/app/layout";
+import { BASE_DATA_URL } from "@/app/page";
 
 interface ContactObject {
   method: string,

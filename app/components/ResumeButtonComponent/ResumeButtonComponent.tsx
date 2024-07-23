@@ -1,5 +1,5 @@
-import {RESUME_LINK} from "@/app/layout";
 import styles from './ResumeButton.module.scss';
+import { RESUME_LINK } from "@/app/page";
 
 const ResumeButton = () => {
     return (
