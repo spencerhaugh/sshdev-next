@@ -10,11 +10,9 @@ interface ContactObject {
 
 async function getData() {
     const response = await fetch(
-    'https://portfolio-server-production-c31f.up.railway.app/contact'
-  );
-  const data = await response.json();
-
-  return data[0].contact;
+        'https://portfolio-server-production-c31f.up.railway.app/contact'
+      );
+    return await response.json();
 }
 
 const ContactPage = async () => {

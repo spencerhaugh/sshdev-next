@@ -11,9 +11,8 @@ async function getAboutData() {
     const response = await fetch(
         'https://portfolio-server-production-c31f.up.railway.app/about'
     );
-    const data = await response.json();
 
-    return data[0].about;
+    return await response.json();
 }
 
 const AboutPage = async () => {
