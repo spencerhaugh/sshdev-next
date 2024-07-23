@@ -34,8 +34,8 @@ export default function ProjectComponent(project: ProjectObject) {
                 <div className={styles.tech}>
                     <strong>Technologies Used:</strong>
                     {
-                        project.technologies.map((tech) =>
-                            <div>{tech}</div>
+                        project.technologies.map((tech, index) =>
+                            <div key={index}>{tech}</div>
                         )
                     }
                 </div>

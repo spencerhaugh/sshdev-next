@@ -11,7 +11,6 @@ async function getSkillsData() {
     );
     const data = await response.json();
 
-    console.log(data.skills)
     return data.skills;
 }
 

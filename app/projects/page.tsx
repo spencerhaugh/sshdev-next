@@ -14,7 +14,7 @@ const ProjectPage = async () => {
         <>
             {
                 projectData.map(project => (
-                    <ProjectComponent {...project} />
+                    <ProjectComponent {...project} key={project.name} />
                 ))
             }
         </>

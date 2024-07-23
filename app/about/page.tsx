@@ -34,16 +34,16 @@ const AboutPage = async () => {
                     <section id="professional">
                         <h3>{aboutData[0].title}</h3>
                         {
-                            aboutData[0].content.map((text) => (
-                                    <p>{ text }</p>
+                            aboutData[0].content.map((text, index) => (
+                                    <p key={index}>{ text }</p>
                                 )
                             )
                         }
 
                         <h3>{aboutData[1].title}</h3>
                         {
-                            aboutData[1].content.map((text) => (
-                                    <p>{ text }</p>
+                            aboutData[1].content.map((text, index) => (
+                                    <p key={index}>{ text }</p>
                                 )
                             )
                         }
@@ -51,8 +51,8 @@ const AboutPage = async () => {
                     <section className={styles.personal}>
                         <h3>{aboutData[2].title}</h3>
                         {
-                            aboutData[2].content.map((text) => (
-                                    <p>{ text }</p>
+                            aboutData[2].content.map((text, index) => (
+                                    <p key={index}>{ text }</p>
                                 )
                             )
                         }
@@ -60,8 +60,8 @@ const AboutPage = async () => {
                     <section className={styles.important}>
                         <h3>{aboutData[3].title}</h3>
                         {
-                            aboutData[3].content.map((text) => (
-                                    <p>{ text }</p>
+                            aboutData[3].content.map((text, index) => (
+                                    <p key={index}>{ text }</p>
                                 )
                             )
                         }
