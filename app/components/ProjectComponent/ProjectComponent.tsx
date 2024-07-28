@@ -5,10 +5,15 @@ export interface ProjectObject {
     name: string;
     description: string;
     imgAsset: string;
-    link: string;
-    repoLink: string;
+    versions: ProjectVersion[];
     body: string;
     technologies: string[];
+}
+
+interface ProjectVersion {
+    language: string;
+    link: string;
+    repoLink: string;
 }
 
 export default function ProjectComponent(project: ProjectObject) {
@@ -17,17 +22,24 @@ export default function ProjectComponent(project: ProjectObject) {
             <article className={styles.projectTile}>
                 <h2 className={styles.h2}>{project.name}</h2>
                 <h3 className={styles.h3}>{project.description}</h3>
-                <a href={project.link} target="_blank">
-                    <img src={project.imgAsset} alt={project.name} className={styles.image}/>
-                </a>
-                <div className={styles.buttons}>
-                    <a href={project.link} target="_blank">
-                        <button className={classnames(styles.button, styles.liveSite)}>LIVE SITE</button>
-                    </a>
-                    <a href={project.repoLink} target="_blank">
-                        <button className={classnames(styles.button, styles.githubCode)}>GITHUB</button>
-                    </a>
-                </div>
+                <img src={project.imgAsset} alt={project.name} className={styles.image}/>
+                    {
+                        project.versions &&
+                            project.versions.map((p, index) =>
+                                <div className={styles.buttons} key={index}>
+                                    <a href={p.link} target="_blank">
+                                        <button className={classnames(styles.button, styles.liveSite)}>
+                                            { p.language ? p.language + ' ' : '' }Deployed Site
+                                        </button>
+                                    </a>
+                                    <a href={p.repoLink} target="_blank">
+                                        <button className={classnames(styles.button, styles.githubCode)}>
+                                            { p.language ? p.language + ' ' : '' }Github
+                                        </button>
+                                    </a>
+                                </div>
+                            )
+                    }
                 <div className={styles.description}>
                     <strong>Description:</strong> {project.body}
                 </div>
