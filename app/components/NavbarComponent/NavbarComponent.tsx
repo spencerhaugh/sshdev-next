@@ -1,14 +1,24 @@
-import Link from "next/link"
-import styles from "./NavbarComponent.module.scss"
+'use client'
 
-const NavbarComponent = () => {
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import styles from "./NavbarComponent.module.scss"
+import { RouteLink } from "@/app/app.config";
+
+const NavbarComponent = ({links}: { links: RouteLink[]}) => {
+    const pathname = usePathname();
+
     return (
         <div className={styles.host}>
             <nav className={styles.navbar}>
-                <Link href="/" className={styles.nav}>Home</Link>
-                <Link href="/about" className={styles.nav}>About</Link>
-                <Link href="/projects" className={styles.nav}>Projects</Link>
-                <Link href="/contact" className={styles.nav}>Contact</Link>
+                {
+                    links.map((link: RouteLink) => {
+                        const isActive = pathname === link.path;
+                        return (
+                            <Link href={link.path} className={isActive ? styles.activeNav : styles.nav} key={`${link.label}-${link.path}`}>{link.label}</Link>
+                        )
+                    })
+                }
             </nav>
         </div>
     )

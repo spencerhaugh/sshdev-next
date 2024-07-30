@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NavbarComponent from "@/app/components/NavbarComponent/NavbarComponent";
+import { links } from "@/app/app.config";
 
 export const metadata: Metadata = {
     title: "Spencer Haugh",
@@ -24,7 +25,7 @@ export default function RootLayout({
         </head>
         <body>
         <main>
-            <NavbarComponent/>
+            <NavbarComponent links={links}/>
             {children}
         </main>
         </body>
