@@ -83,6 +83,7 @@
   place-content: center;
   margin: 0;
   padding: 2rem 0;
+  width: 100vw;
   animation: bounce-in-top 1.1s 0.4s both;
 }
 
@@ -98,6 +99,13 @@
   font-family: "Bungee Shade", cursive;
   font-size: 8rem;
   transition: color 0.3s ease-in-out;
+}
+
+@media (max-width: 900px) {
+  .heroTitle {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
 }
 
 /*# sourceMappingURL=HeroComponent.module.css.map */
