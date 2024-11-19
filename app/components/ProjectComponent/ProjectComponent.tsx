@@ -32,11 +32,15 @@ export default function ProjectComponent(project: ProjectObject) {
                                             { p.language ? p.language + ' ' : '' }Deployed Site
                                         </button>
                                     </a>
+                                    { p.repoLink ?
                                     <a href={p.repoLink} target="_blank">
                                         <button className={classnames(styles.button, styles.githubCode)}>
                                             { p.language ? p.language + ' ' : '' }Github
                                         </button>
                                     </a>
+                                        :
+                                        ''
+                                    }
                                 </div>
                             )
                     }
