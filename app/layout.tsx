@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./globals.scss";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import NavbarComponent from "@/app/components/NavbarComponent/NavbarComponent";
 import { links } from "@/app/app.config";
