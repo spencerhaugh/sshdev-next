@@ -13,12 +13,21 @@
 /.next/
 /out/
 
+# compiled sass output (generated from .scss sources)
+*.css
+*.css.map
+!*.min.css
+
 # production
 /build
 
 # misc
 .DS_Store
 *.pem
+
+# agents
+.claude
+CLAUDE.md
 
 # debug
 npm-debug.log*
